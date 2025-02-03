@@ -2,12 +2,11 @@ name: Challenge 20 Module - Main Deployment
 env:
   deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
 
-# Run Deployment post closing
 on:
   pull_request:
     types: closed
     branches:
-      - main # Run deploy after pushed to main
+      - main 
 
 jobs:
   render-deploy:

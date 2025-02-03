@@ -1,10 +1,9 @@
-name: Challenge 20 Module - Check Tests to Develop
+name: Challenge 20 
 
-# Run tests for PRs to Develop branch
 on:
   pull_request:
     branches:
-      - develop # Run tests for PRs against develop branch
+      - develop 
 
 jobs:
   test-runner:
@@ -27,4 +26,4 @@ jobs:
         with:
           build: npm run build
           start: npm run start
-          component: true #Should run Component testing
+          component: true 
