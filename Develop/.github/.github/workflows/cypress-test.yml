@@ -1,0 +1,28 @@
+name: Cypress Test
+
+on:
+  pull_request:
+    branches:
+      - develop  # Trigger when a pull request is made to the 'develop' branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use Ubuntu for the CI environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Checkout the repository code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # Use Node.js version 20
+
+      - name: Install dependencies
+        run: npm ci  # Install project dependencies
+
+      - name: Install Cypress
+        run: npm install cypress --save-dev  # Install Cypress for running tests
+
+      - name: Run Cypress tests
+        run: npx cypress run  # Run Cypress tests
