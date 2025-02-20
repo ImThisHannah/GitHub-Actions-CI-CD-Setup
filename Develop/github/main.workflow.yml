@@ -1,6 +1,6 @@
 name: Challenge 20 Module - Main Deployment
 env:
-  deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+  deploy_url: ${{ secrets.RENDER_SERVICE_ID }}
 
 on:
   pull_request:
