@@ -16,9 +16,7 @@ SO THAT the application is constantly updated when major releases are made to th
 ```
 ## Getting Started
 
-You'll first upload the content inside the `Develop` folder to a GitHub Repository. 
-
-You'll then deploy the application via [Render and MongoDB]
+You'll deploy the application via [Render and MongoDB]
 
 Once you see the application has been deployed, you'll navigate to the Settings option and turn off Auto-Deploy.
 
