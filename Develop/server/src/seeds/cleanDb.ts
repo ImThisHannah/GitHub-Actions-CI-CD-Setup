@@ -5,7 +5,7 @@ export default async (modelName: "Question", collectionName: string) => {
   try {
     let modelExists = await models[modelName].db.db.listCollections({
       name: collectionName
-    }).toArray()
+    }).toArray();
 
     if (modelExists.length) {
       await db.dropCollection(collectionName);
@@ -13,4 +13,7 @@ export default async (modelName: "Question", collectionName: string) => {
   } catch (err) {
     throw err;
   }
+}
+else {
+  console.error(`Model ${modelName} not found.`);
 }
